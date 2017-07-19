@@ -40,7 +40,17 @@ $colors: (
   light:      #f4f4f4,
   dark:       #222
 );
-
+ion-header{
+  background-color: #488aff!important;
+  ion-navbar .toolbar-background{
+    background-color: #488aff!important;
+  }
+  .toolbar-title{
+    color: white!important;
+    text-align: center!important;
+    text-align:-webkit-center!important;
+  }
+}
 
 // App iOS Variables
 // --------------------------------------------------
