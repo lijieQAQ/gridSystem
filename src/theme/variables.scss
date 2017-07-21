@@ -51,6 +51,19 @@ ion-header{
     text-align:-webkit-center!important;
   }
 }
+// 全局导航
+$toolbar-ios-title-text-color: white;
+$toolbar-md-title-text-color: white;
+.header-ios .toolbar-background-ios,
+.header-md .toolbar-background-md {
+  border-color: #eaeaea !important;
+}
+.bar-button-default-ios,
+.bar-button-default-md {
+  color: white !important;
+  width: 44px !important;
+}
+
 
 // App iOS Variables
 // --------------------------------------------------
@@ -96,3 +109,6 @@ ion-header{
 
 @import "roboto";
 @import "noto-sans";
+ion-content{
+  background-color: #f7f7f7!important;
+}

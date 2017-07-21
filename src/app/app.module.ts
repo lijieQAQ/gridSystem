@@ -1,6 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { HttpModule, JsonpModule } from '@angular/http';
 import { MyApp } from './app.component';
 import { HTTP } from '@ionic-native/http';
 import { HttpClient } from "../providers/HttpClient";
@@ -10,6 +11,7 @@ import { sysSettingPage } from '../pages/sysSetting/sysSetting';
 import { statisticsPage } from '../pages/statistics/statistics';
 import { gridPage } from '../pages/grid/grid';
 import { TabsPage } from '../pages/tabs/tabs';
+import { gridManagementPage } from '../pages/grid/gridManagement/gridManagement';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,11 +22,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     sysSettingPage,
     statisticsPage,
     gridPage,
+    gridManagementPage,
     TabsPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    JsonpModule,
+    HttpModule,
+    IonicModule.forRoot(MyApp,{
+      backButtonText: '',
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -32,6 +39,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     sysSettingPage,
     statisticsPage,
     gridPage,
+    gridManagementPage,
     TabsPage
   ],
   providers: [

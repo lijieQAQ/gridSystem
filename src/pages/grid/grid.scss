@@ -1,3 +1,19 @@
 page-grid {
-
+  ion-content{
+    margin-top: 1%;
+  }
+  ion-row{
+    width: 100%;
+    text-align: center;
+    ion-col{
+      border-bottom:1px solid #aeaeae;
+      background-color: #ffffff!important;
+      div{
+        font-size: 1.8rem;
+      }
+    }
+    ion-col:not(:nth-child(3n+0)){
+      border-right:1px solid #aeaeae;
+    }
+  }
 }

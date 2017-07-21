@@ -7,7 +7,6 @@ import { HTTP } from '@ionic-native/http';
 import { Platform , LoadingController} from 'ionic-angular';
 import { ServiceConfig } from './service.config';
 import { BasePage } from "../pages/base/base-page";
-import { Transfer, FileUploadOptions, TransferObject } from '@ionic-native/transfer';
 
 @Injectable()
 
@@ -17,8 +16,7 @@ export class HttpClient extends BasePage {
               public http: Http,
               public platform: Platform,
               public nativeHttp: HTTP,
-              public loadingCtrl:LoadingController,
-              private transfer: Transfer) {
+              public loadingCtrl:LoadingController) {
               super();
   }
 

@@ -1,17 +1,34 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>网格查看</ion-title>
+    <ion-title>网格管理</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4 (click)="goLevelTwo('grid')">
+       <img src="../../assets/images/management.png">
+        <div>网格管理</div>
+      </ion-col>
+      <ion-col col-4 (click)="goLevelTwo('mine')">
+        <img src="../../assets/images/mine.png">
+        <div>我的网格</div>
+      </ion-col>
+      <ion-col col-4 (click)="goLevelTwo('bind')">
+        <img src="../../assets/images/bind.png">
+        <div>绑定管理</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4 (click)="goLevelTwo('quota')">
+        <img src="../../assets/images/quota.png">
+        <div>指标管理</div>
+      </ion-col>
+      <ion-col col-4 (click)="goLevelTwo('resources')">
+        <img src="../../assets/images/resources.png">
+        <div>资源管理</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
