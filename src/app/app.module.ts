@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { HTTP } from '@ionic-native/http';
 import { HttpClient } from "../providers/HttpClient";
 import { Utils } from "../providers/Utils";
+import { gridTypePipe } from "../providers/gridTypePipe";
 
 import { sysSettingPage } from '../pages/sysSetting/sysSetting';
 import { statisticsPage } from '../pages/statistics/statistics';
@@ -23,6 +24,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     statisticsPage,
     gridPage,
     gridManagementPage,
+    gridTypePipe,
     TabsPage
   ],
   imports: [

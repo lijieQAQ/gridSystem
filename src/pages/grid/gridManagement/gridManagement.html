@@ -5,5 +5,22 @@
 </ion-header>
 
 <ion-content>
-  网格管理页面
+  <ion-list class="gridList">
+    <ion-item-sliding *ngFor="let item of gridList">
+      <ion-item>
+        <div><span>网格名称:{{item.name}}</span><span>网格类型:{{item.type | gridTypePipe}}</span></div>
+        <div>创建时间:{{item.create_date}}</div>
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button color="secondary">
+          <ion-icon name="build"></ion-icon>
+          编辑
+        </button>
+        <button ion-button color="danger">
+          <ion-icon name="trash"></ion-icon>
+          删除
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>

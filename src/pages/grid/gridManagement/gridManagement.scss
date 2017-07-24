@@ -1,3 +1,17 @@
 page-gridManagement {
-
+  .gridList{
+    ion-item {
+      ion-label{
+        div:first-child{
+          font-size: 2rem;
+          span:last-child{
+            float: right;
+          }
+        }
+        div:last-child{
+          color: #acacac;
+        }
+      }
+    }
+  }
 }
