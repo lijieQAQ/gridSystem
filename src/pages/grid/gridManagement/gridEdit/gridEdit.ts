@@ -26,8 +26,6 @@ export class gridEditPage extends BasePage{
     }, function (data) {
       if (data.status == "success") {
         self.showToastText(self.toastCtrl, data.info);
-      } else {
-        self.showToastText(self.toastCtrl, data.info);
       }
     });
   }
