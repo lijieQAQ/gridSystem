@@ -3,8 +3,14 @@
     <ion-title>
       统计分析
     </ion-title>
+    <ion-buttons end>
+      <ion-icon class="chooseArea"></ion-icon>
+      <ion-multi-picker *ngIf="multiStatus" cancelText="取消" doneText="完成" id="cities" [(ngModel)]="area" item-content [multiPickerColumns]="simpleColumns"></ion-multi-picker>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
+  <ion-searchbar (click)="chooseGridInit()" type="text" placeholder="请输入网格名称"></ion-searchbar>
+  <div id="container" #container></div>
 </ion-content>

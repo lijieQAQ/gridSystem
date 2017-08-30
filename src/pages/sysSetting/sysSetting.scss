@@ -2,4 +2,24 @@ page-sysSetting {
   ion-content .scroll-content{
     background-color: #f7f7f7;
   }
+  ion-toolbar{
+    padding:0px!important;
+    .toolbar-background{
+      background-color: transparent!important;
+    }
+    ion-item{
+      background-color: #488aff !important;
+      ion-avatar img{
+        border-radius: 0!important;
+        width:58px!important;
+        height:58px!important;
+      }
+      h2{
+        color: #ffffff!important;
+      }
+      p{
+        color: #cecece !important;
+      }
+    }
+  }
 }

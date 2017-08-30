@@ -1,3 +1,43 @@
 page-statistics {
+  #container{
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    margin:0;
+    font-family:"微软雅黑";
 
+  }
+  .toolbar-ios {
+    max-height: 44px;
+  }
+  .chooseArea {
+    background-image: url(../assets/images/area.png);
+    width: 28px;
+    height: 25px;
+    position: relative;
+    right: 10px;
+    background-size: cover;
+  }
+  .multi-picker-text{
+    display: none!important;
+  }
+  .scroll{
+    height: 100%;
+  }
+ .searchbar{
+   background: inherit!important;
+   padding: 8px!important;
+   position: absolute!important;
+   display: -webkit-box!important;
+   display: -webkit-flex!important;
+   display: -ms-flexbox!important;
+   display: flex!important;
+   -webkit-box-align: center!important;
+   -webkit-align-items: center!important;
+   -ms-flex-align: center!important;
+   align-items: center!important;
+   width: 100%!important;
+   z-index: 2;
+ }
 }

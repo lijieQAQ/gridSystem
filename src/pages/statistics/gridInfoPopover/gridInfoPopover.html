@@ -1,0 +1,10 @@
+<ion-list radio-group  class="popover-page">
+  <ion-row>
+    <ion-col>
+      <button  ion-item detail-none class="text-button text-smaller">网格指标</button>
+    </ion-col>
+  </ion-row>
+  <ion-item class="text-athelas" *ngFor="let quota of quotaList">
+    <ion-label><span>{{quota.ITEM_NAME}}:</span><span >{{quota.FINAL_SCORE}}</span></ion-label>
+  </ion-item>
+</ion-list>

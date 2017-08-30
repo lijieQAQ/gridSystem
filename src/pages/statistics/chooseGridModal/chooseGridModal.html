@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only (click)="dismissModal()">
+        <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-searchbar [(ngModel)]="searchStr" type="text" placeholder="请输入网格名称"></ion-searchbar>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list radio-group  class="popover-page">
+    <ion-item class="text-athelas" *ngFor="let grid of gridList | chooseGridPipe:searchStr" (click)="chooseGrid(grid)">
+      <ion-label>{{grid.name}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

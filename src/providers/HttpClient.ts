@@ -23,7 +23,7 @@ export class HttpClient extends BasePage {
   // post 和 get请求
 
   public post(url: string, paramObj: any, cb?: Function) {
-    this.startLoading(this.loadingCtrl)
+    this.startLoading(this.loadingCtrl);
     if (url.indexOf('http') == -1) {
       url = ServiceConfig.getUrl() + url;
     }

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController , LoadingController, ToastController,AlertController } from 'ionic-angular';
+import { NavController , ToastController,AlertController} from 'ionic-angular';
 import { BasePage } from '../../base/base-page';
 import { HttpClient } from '../../../providers/HttpClient';
 import { ServiceConfig } from '../../../providers/service.config';
 import { gridEditPage } from './gridEdit/gridEdit';
-
+import { gridDetailPage } from './gridDetail/gridDetail';
 @Component({
   selector: 'page-gridManagement',
   templateUrl: 'gridManagement.html',
@@ -22,7 +22,7 @@ export class gridManagementPage extends BasePage{
   }
   //编辑
   goEdit(item){
-    this.navCtrl.push(gridEditPage,{gridDetail:item});
+    this.navCtrl.push(gridEditPage,{grid:item});
   }
   //删除
   deleteGridInit(item){
@@ -79,6 +79,7 @@ export class gridManagementPage extends BasePage{
       "pageNumber":self.pageNumber,
       "pageSize":ServiceConfig.PAGESIZE
     }, function(data) {
+      console.log(data);
       if(data.status=="success"){
         if(data.data.length<ServiceConfig.PAGESIZE){
           self.isHasMore=false;
@@ -92,5 +93,9 @@ export class gridManagementPage extends BasePage{
         self.showToastText(self.toastCtrl,data.info);
       }
     });
+  }
+  //查看详情
+  goDetail(item){
+    this.navCtrl.push(gridDetailPage,{"gridDetail":item});
   }
 }

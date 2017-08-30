@@ -6,8 +6,8 @@
 
 <ion-content>
   <ion-list class="gridList">
-    <ion-item-sliding *ngFor="let item of gridList">
-      <ion-item>
+    <ion-item-sliding *ngFor="let item of gridList" tappable>
+      <ion-item (click)="goDetail(item)">
         <div><span>网格名称:{{item.name}}</span><span>网格类型:{{item.type | gridTypePipe}}</span></div>
         <div>创建时间:{{item.create_date | dateToStringPipe}}</div>
       </ion-item>

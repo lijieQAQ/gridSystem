@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      登陆
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-input type="text" placeholder="请输入用户名" [(ngModel)]="wcode"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="password" placeholder="请输入密码" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item style="border-bottom: none">
+      <ion-label>记住密码</ion-label>
+      <ion-checkbox  [(ngModel)]="remember"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <div  class="loginButton">
+    <button ion-button block (click)="login()">登陆</button>
+  </div>
+</ion-content>
+

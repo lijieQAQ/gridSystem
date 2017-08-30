@@ -6,7 +6,11 @@ import {  dateFormat } from '../providers/Utils';
 })
 export class dateToStringPipe implements PipeTransform{
   transform(value:any):string{
-    let time=new Date(value.time);
-    return dateFormat(time,"yyyy-MM-dd hh:mm:ss");
+    if(value!=null){
+      let time=new Date(value.time);
+      return dateFormat(time,"yyyy-MM-dd hh:mm:ss");
+    }else{
+      return "";
+    }
   }
 }

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>公告详情</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      公告详情
+    </ion-card-header>
+
+    <ion-list>
+      <ion-item>
+        <span>标题 :</span><span >{{notice.title}}</span>
+      </ion-item>
+      <ion-item>
+        <span>公告类型 :</span><span>{{notice.noticeType | MetadataTypePipe:NOTICE_TYPEList}}</span>
+      </ion-item>
+      <ion-item>
+        <span>有效期（起） :</span><span>{{notice.sendDate.substr(0,notice.sendDate.length-2)}}</span>
+      </ion-item>
+      <ion-item>
+        <span>有效期（止） :</span><span>{{notice.endDate.substr(0,notice.endDate.length-2)}}</span>
+      </ion-item>
+      <ion-item>
+        <span>处理优先级 :</span><span>{{notice.prompt | MetadataTypePipe:PROMPTList}}</span>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      内容
+    </ion-card-header>
+    <ion-card-content [innerHtml]="notice.contentByte">
+    </ion-card-content>
+  </ion-card>
+</ion-content>

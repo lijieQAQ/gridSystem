@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>网格详情</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      网格详情
+    </ion-card-header>
+
+    <ion-list>
+      <ion-item>
+        <span>网格编号 :</span><span >{{grid.grid_code}}</span>
+      </ion-item>
+      <ion-item>
+        <span>网格名称 :</span><span>{{grid.name}}</span>
+      </ion-item>
+      <ion-item>
+        <span>网格类型 :</span><span>{{grid.type | gridTypePipe}}</span>
+      </ion-item>
+      <ion-item>
+        <span>所属区域 :</span><span>{{grid.region_id}}</span>
+      </ion-item>
+      <ion-item>
+        <span>创建日期 :</span><span>{{grid.create_date | dateToStringPipe}}</span>
+      </ion-item>
+      <ion-item>
+        <span>创建人 :</span><span>{{grid.create_staff}}</span>
+      </ion-item>
+      <ion-item>
+        <span>是否启用 :</span><span>{{grid.grid_code=='Y'?'是':'否'}}</span>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>

@@ -5,5 +5,29 @@
 </ion-header>
 
 <ion-content>
-111
+  <ion-list>
+    <ion-item>
+      <ion-label>网格编号</ion-label>
+      <ion-input type="text" [(ngModel)]="grid.grid_code" disabled></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>网格名称</ion-label>
+      <ion-input type="text" [(ngModel)]="grid.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>网格类型</ion-label>
+      <ion-select [(ngModel)]="grid.type" okText="确定" cancelText="取消">
+        <ion-option value="G">普通网格</ion-option>
+        <ion-option value="A">协同网格</ion-option>
+        <ion-option value="L">逻辑网格</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>所属区域</ion-label>
+      <ion-input type="text" [(ngModel)]="grid.region_id" disabled></ion-input>
+    </ion-item>
+  </ion-list>
+  <div  class="editSubmitButton">
+    <button ion-button block (click)="editSubmit()">提交</button>
+  </div>
 </ion-content>
